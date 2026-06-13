@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Security Headers: CSP and Referrer Policy -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com; connect-src 'self';">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <meta name="description" content="Personal portfolio and resume of Ayush Bhartal, B.Tech CSE Student, AI/ML & Software Developer. Specialized in AI models, digital twins, audio processing, and cloud tools.">
+  <meta name="author" content="Ayush Bhartal">
+  <title>Ayush Bhartal | AI/ML & Software Developer</title>
+  
+  <!-- Font Awesome Icons CDN (Secured with Subresource Integrity) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  
+  <!-- Google Fonts & Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Global Plexus & Neon Trace Background Canvas -->
+  <canvas id="plexus-canvas"></canvas>
+
+  <!-- ==========================================
+       FIXED TOP HORIZONTAL NAVBAR
+       ========================================== -->
+  <header class="header" id="navbar">
+    <a href="#home" class="logo" id="nav-logo">AYUSH<span>.</span></a>
+    
+    <nav>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    
+    <button class="hamburger" id="hamburger-menu" aria-label="Toggle navigation menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </header>
+
+  <!-- ==========================================
+       HERO / INTRO SECTION (SPLIT SCREEN)
+       ========================================== -->
+  <section class="hero" id="home">
+    <div class="hero-split-container">
+      
+      <!-- Left Panel: Full-height Interactive Graphic (Layered Card Collage) -->
+      <div class="hero-graphic-panel">
+        <!-- Floating triangle mascots inside hero graphic area -->
+        <div class="mascot-triangle mascot-hero-1 color-cyan" aria-hidden="true"></div>
+        <div class="mascot-triangle mascot-hero-2 color-yellow" aria-hidden="true"></div>
+        <div class="mascot-triangle mascot-hero-3 color-red" aria-hidden="true"></div>
+        
+        <div class="hero-card-stack" id="hero-shapes">
+          <!-- Back Card 7 (Maroon) -->
+          <div class="stack-card card-bg-7 layer" data-depth="-0.03"></div>
+          <!-- Back Card 6 (Sage Green) -->
+          <div class="stack-card card-bg-6 layer" data-depth="0.05"></div>
+          <!-- Back Card 5 (Rust Red) -->
+          <div class="stack-card card-bg-5 layer" data-depth="-0.02"></div>
+          <!-- Back Card 4 (Olive Green) -->
+          <div class="stack-card card-bg-4 layer" data-depth="0.04"></div>
+          <!-- Back Card 3 (Deep Teal) -->
+          <div class="stack-card card-bg-3 layer" data-depth="-0.05"></div>
+          <!-- Back Card 2 (Bright Turquoise) -->
+          <div class="stack-card card-bg-2 layer" data-depth="0.06"></div>
+          <!-- Back Card 1 (White) -->
+          <div class="stack-card card-bg-1 layer" data-depth="-0.03"></div>
+          <!-- Foreground Card (Golden Yellow / Tan) -->
+          <div class="stack-card card-fg layer" data-depth="0.03">
+            <div class="card-inner-text">
+              <h1 class="hero-name-big"><span class="hero-name-sub tech-scramble">Hey I'm</span><br>Ayush<br>Bhartal</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right Panel: Description -->
+      <div class="hero-details-panel">
+        <div class="hero-details-content">
+          <h2 class="details-heading">About Me</h2>
+          
+          <p class="hero-bio" id="hero-bio-text">
+            Third-year B.Tech Computer Engineering student passionate about AI/ML and software development, with experience building projects involving digital twins, audio processing, and data-driven systems.
+          </p>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Dynamic Sections Container -->
+  <div id="dynamic-sections-container"></div>
+
+  <!-- ==========================================
+       CONTACT SECTION (LIGHT BACKGROUND / SECTION MORPH)
+       ========================================== -->
+  <section class="section section-dark section-morph" id="contact">
+    <div class="contact-glass-card">
+      <!-- Background triangle mascots -->
+      <div class="mascot-triangle mascot-contact-1 color-yellow" aria-hidden="true"></div>
+      <div class="mascot-triangle mascot-contact-2 color-cyan" aria-hidden="true"></div>
+      <div class="section-header">
+        <div>
+          <span class="section-subtitle">// INBOX</span>
+          <h2 class="section-title tech-scramble">Get In Touch</h2>
+        </div>
+      </div>
+      
+      <div class="contact-container">
+        <!-- Left Details Panel -->
+        <div class="contact-info-panel">
+          <h3 class="contact-info-title">Coordinates</h3>
+          <p class="contact-info-desc">
+            Feel free to reach out for collaborations, project discussions, or technology opportunities. I'd love to chat!
+          </p>
+          
+          <div class="contact-details-list">
+            <div class="contact-item">
+              <div class="contact-icon-box">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div>
+                <div class="contact-item-label">Mailbox</div>
+                <a href="mailto:bhartalayush@gmail.com" class="contact-item-val" id="contact-email-val">bhartalayush@gmail.com</a>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon-box">
+                <i class="fa-solid fa-map-location-dot"></i>
+              </div>
+              <div>
+                <div class="contact-item-label">Location</div>
+                <div class="contact-item-val" id="contact-location-val">Pune, India - 411030</div>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <div class="contact-icon-box">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div>
+                <div class="contact-item-label">Call</div>
+                <a href="tel:+919130196188" class="contact-item-val" id="contact-phone-val">+91 9130196188</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right Form Panel -->
+        <div class="contact-form-panel">
+          <form class="contact-form" id="contact-form-element" action="#" method="POST">
+            <div class="form-group-row">
+              <div class="form-group">
+                <label for="form-name">Name</label>
+                <input type="text" id="form-name" class="form-control" placeholder="Enter your name" required>
+              </div>
+              <div class="form-group">
+                <label for="form-email">Email</label>
+                <input type="email" id="form-email" class="form-control" placeholder="Enter your email" required>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="form-subject">Subject</label>
+              <input type="text" id="form-subject" class="form-control" placeholder="Project Inquiry" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="form-message">Message Details</label>
+              <textarea id="form-message" class="form-control" placeholder="Write details here..." required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="align-self: flex-start;">
+              Send Message <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        AYUSH<span>.</span>
+      </div>
+      <div>
+        &copy; <span id="current-year">2026</span> Ayush Bhartal. Rebuilt for modern performance.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
