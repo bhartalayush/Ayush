@@ -90,6 +90,16 @@ function renderPersonalInfo() {
     });
   }
 
+  // Set URLs for the About Me buttons
+  const githubBtn = document.getElementById("hero-btn-github");
+  if (githubBtn) githubBtn.href = info.socials.github;
+  
+  const linkedinBtn = document.getElementById("hero-btn-linkedin");
+  if (linkedinBtn) linkedinBtn.href = info.socials.linkedin;
+  
+  const resumeBtn = document.getElementById("hero-btn-resume");
+  if (resumeBtn) resumeBtn.href = info.resumeUrl;
+
   // Footer coordinates
   setElementText("current-year", new Date().getFullYear());
   setElementText("contact-email-val", info.email);

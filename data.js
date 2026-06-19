@@ -17,10 +17,10 @@ const RESUME_DATA = {
     email: "bhartalayush@gmail.com",
     avatar: "", // Explicitly empty (using left interactive canvas and right details)
     bio: "Third-year B.Tech Computer Engineering student passionate about AI/ML and software development, with experience building projects involving digital twins, audio processing, and data-driven systems.",
-    resumeUrl: "#", // Add link to your PDF resume here if available
+    resumeUrl: "AyushBhartalResume.pdf",
     socials: {
       github: "https://github.com/bhartalayush",
-      linkedin: "https://linkedin.com/in/ayush-bhartal-8918103a5",
+      linkedin: "https://www.linkedin.com/in/ayush-bhartal-8918103a5/",
       email: "mailto:bhartalayush@gmail.com"
     }
   },
